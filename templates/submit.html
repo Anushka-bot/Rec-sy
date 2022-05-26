@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test the Project</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='uploads/style_submit_page.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/static/uploads/favicon.ico" type="image/png" />
+  </head>
+
+  <body>
+
+    
+    <div class="heading">
+      <img class="detective" src="/static/uploads/criminal-2.png" alt="no image found" />
+      <h1>Let's find out who it is!</h1>
+    </div>
+
+
+    <!---------------- instructions---------------- -->
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <div class="text">
+        <ul>
+          <li>Click on 'Select file' button and select the image you want to upload .
+          </li>
+          <li>
+            Click on 'Upload' button to upload the image.
+          </li>
+          <li>The website will take about 30 seconds to show an output, sit tight untill then !!
+           </li>
+          <li>
+            The Database currently contains images of 50 criminals and Fraudsters around the world. In 
+  case the website was unable to recognise the person there can be many reasons for this, such 
+  as: 
+  <ol>
+    <li>The face is turned upside-down.</li>
+    <li>The face of the person in the image in not clearly visible.</li>
+    <li>The face is turned too sideways away from the camera instead of looking straight 
+      into the camera.</li>
+    <li> The face is too small in the image.</li>
+    <li>The data of the recognised person is not there in the database.</li>
+
+  </ol>
+          </li>
+          <li>In case you didn't got the name of the person, try with a different image :)</li>
+        </ul>
+      </div>
+    </div>
+
+
+       <!---------------- image selection---------------- -->
+    <div class="submit">
+      <form action="/output" method="POST" enctype="multipart/form-data">
+        <label class="select-btn btn" for="inpFile"
+          >Select file <input id="inpFile" type="file" name="file" />
+        </label>
+
+        <label class="select-btn btn" for="submit"
+          >Upload <input id="submit" type="submit"
+        /></label>
+      </form>
+      <div class="image-preview" id="imagePreview">
+        <img src="" class="image-preview__image" alt="image preview" />
+        <span class="image-preview__defualt-text">Image preview</span>
+      </div>
+    </div>
+
+
+    <script src="/static/uploads/script2.js" type="text/javascript"></script>
+  </body>
+</html>

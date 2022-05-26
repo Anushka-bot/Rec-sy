@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rec-sy</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='uploads/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="icon" href="/static/uploads/favicon.ico" type="image/png"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+ 
+  <header>
+    <nav class="navbar">
+      <a href="#" class="nav-branding">Rec-sy</a>
+
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#abtproject" class="nav-link">About Project</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tech" class="nav-link">Techstack used</a>
+        </li>
+        <li class="nav-item">
+          <a id="about" href="#abtme" class="nav-link">About me</a>
+        </li>
+      </ul>
+  
+    </nav>
+  </header>
+  
+ <!--------------- top container--------- -->
+  <section id="top" class="top-container">
+    <h1>Let's figure out some criminals!</h1>
+    <a class="btn" href= "{{ url_for('submit') }}" >Test my Project</a>
+  </section>
+ 
+ <!---------------middle container--------- -->
+  <section class="middle-container">
+    
+    
+    <div class="about-project" id="abtproject"   >
+      <img class="criminal-img" src="/static/uploads/criminal-1.png" alt="criminal image">
+      <h2>About Project</h2>
+      <div class="project-row">
+        <!-- <h3>Identifying Criminals</h3> -->
+        <h3>Face Recognition Challenge</h3>
+        <p class="text">This Project is the implementation of face recognition system which identifies top notch criminals and fraudsters in the world just by using an image. The face recognition and detection is done by a face recognition model integrated in the backend part. User has to upload an image of the person that he/she wants to identify and after simulations, it will return the name of the person identified in the image from the data stored in the database. </p>
+          
+            <h3>How it works?</h3>
+            <p class="text">
+              Firstly the user have to upload an image and submit it on the website. This user input is then passed to the server and saved in a local folder. The integrated Face Recognition model access that image via tha folder and after simulations, returns the name of person in the image back to the server. This name is then displayed on the website. Amazing? Try it out then!</p>
+      </div>
+    </div>
+    <hr>
+
+
+    <div class="techstack" id="tech" >
+      <h2>Techstack used</h2>
+      <h3>Python, Flask, HTML, CSS, JavaScript</h3>
+      <div>
+        <img class="contact" src="/static/uploads/coding.png" alt="coding image">
+        <ul class="text"> <li>The Face recognition and detection model is build using OpenCV library in Python Language. OpenCV is a
+          huge open-source library for computer vision, machine learning, and image processing. It recieves path of
+          the image as input and after simulations return the name of the recognised person.</li> 
+          <li > This Model is integrated with Flask server. Flask proves to be an excellent microframework for
+            Web-Applications. After receiving output from the model, it redirects this to the incorporated
+            HTML page. </li>
+          <li >he Frontend Part of this Project is made using HTML, CSS and JavaScript. HTML page uses Jinja Tags
+            to display the names recieved from the server on the website.</li></ul> 
+      </div>
+    </div>
+    <hr>
+
+
+    <div class="about-me" id="abtme">
+      <img class="me" src="/static/uploads/contact_me.jpg" alt="my image">
+      <h2>About Me</h2>
+      <p class="text">I am a Sophomore in Computer Science and Engineering who is passionate about programming👩‍💻. I find Computer Science a fascinating subject because we can build different technologies according to the solutions to the problem we face in daily life. Computer Science gives a boost to our creativity💥. I am currently into Web development and competitive Programming. Outside of technical work, I like to think of myself as a multipotentialite who dabbles with music, movies, and painting😌. <br><a class="btn" id="bottom-btn" href="mailto:anushkabansal101@gmail.com">CONTACT ME</a> </p>
+      
+    </div>
+   
+
+
+  </section>
+
+ <!---------------footer----------------------------->
+  <section class="footer">
+    <div class="bottom-line"> 
+      <a class="footer-link" href="https://www.linkedin.com/in/anushka-bansal-154660201/" target="__blank"> <img class="icons" src="/static/uploads/linkedin.png" alt="not found">LinkedIn</a>
+      <a class="footer-link" href="https://github.com/anushka-bot" target="__blank"> <img class="icons" src="/static/uploads/github.png" alt="not found" >Github</a>
+      <a class="footer-link" href="https://anushka-bot.github.io/" target="__blank"><img class="icons" src="/static/uploads/global.png" alt="not found">Website</a>
+    </div>
+    <p class=copyright" style="color: #F2F2F2; font-size: 30px;">© Anushka Bansal</p>
+    </section>
+  
+ <script src="/static/uploads/script.js"></script>
+
+</body>
+
+</html>

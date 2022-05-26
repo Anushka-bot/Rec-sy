@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static',filename='uploads/style_output_page.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style_output_page.css">
+  <link rel="icon" href="/static/uploads/favicon.ico" type="image/png" />
+  <title>Output</title>
+</head>
+
+<body>
+  
+<div class="heading">
+   
+  <img class="detective" src="/static/uploads/criminal-3.png" alt="no image found" />
+  <h1>And the person is.....</h1>
+
+</div>
+
+  <!---------------Output part-------------- -->
+  <div class="information">
+    <h2 class="name">{{ output_name }} !!</h2>
+    <p class="wiki">{{ wiki }} </p>
+  </div>
+  <div class="buttons">
+    <a class="btn" id="btn-1" href="{{ url_for('submit') }}">Try again</a>
+    <a class="btn" id="btn-2"" href= " {{ url_for('home') }}">Go to home</a>
+    
+</body>
+
+</html>
