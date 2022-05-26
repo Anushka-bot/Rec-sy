@@ -3,21 +3,7 @@ Rec-sy is a recognition system built using OpenCV and Python.
 
 ## About Project
 This Project is the implementation of face recognition system which identifies top notch criminals and fraudsters in the world just by using an image. The face recognition and detection is done by a face recognition model integrated in the backend part. User has to upload an image of the person that he/she wants to identify and after simulations, it will return the name of the person identified in the image from the data stored in the database.This project is also deployed on Heroku Server. 
-**Go and check it out!**
-
-  ## Instructions for the website
-  - After that you are redirected to the website as shown below
-    -![This is an image](https://user-images.githubusercontent.com/75663460/170486947-aa94ffe7-0762-48f6-9bdb-60b65603e224.png) 
-    
- - Click on 'Test my project' button
- - You will be redirected to a new page where you will upload an image of the criminal that you want to identify
- - Read the instructions properly and before uploading
-   -![This is an image](https://user-images.githubusercontent.com/75663460/170487732-2e3f3118-6698-455a-9782-29403b50ba8d.png)
- - Wait for some time..
- - And voila!! You will get the name of the criminal and about him (directly from wikipedia) as shown below
-   -![This is an image](https://user-images.githubusercontent.com/75663460/170487993-0a4f4933-2708-400a-b2db-fabe9bd852f6.png)
-   
-Link to the project ->
+**Go and check it out!** Link to the project ->
    
 ## TechStack used
    - The Face recognition and detection model is build using OpenCV library in Python Language. OpenCV is a huge open-source library for computer vision, machine learning, and image processing. It recieves path of the image as input and after simulations return the name of the recognised person.
@@ -27,7 +13,7 @@ Link to the project ->
 ## How the project works
    - Firstly the user have to upload an image and submit it on the website. This user input is then passed to the server and saved in a local folder. The integrated Face Recognition model access that image via tha folder and after simulations, returns the name of person in the image back to the server. This name is then displayed on the website. Amazing? Try it out then!
 
-## Required Libraries
+## Requirements
   - You will require libraries and dependencies as mentioned below
     - python (Must be 64-bit version)
     - cmake
@@ -39,8 +25,9 @@ Link to the project ->
     - wikipidea
    - Tip: If you find difficulties in installing dlib, refer to the youtube video below, it helped me lot!!
      - [Check this out](https://www.youtube.com/watch?v=xaDJ5xnc8dc) 
+   - You can also refer to the requirements.txt file above in the repo
  
-## About Floders and Files in Source Code
+## About Folders and Files in Source Code
 1. app.py >> It is the Flask server and the file which you have to run. It integrates the face recognition model by importing it and interact with the frontend part. It takes input image from the user and send it to the face recognition model. After simulations, the model return an output to this server and the server again send it to the frontend part where it is displayed on the website.
 2. face_rec.py >> It contains the face recognition and detection model.
 3. faces folder >> It is basically the database for the face recognition model. It contains all the known faces. 
@@ -50,27 +37,53 @@ Link to the project ->
 
 ## How to run the code
    - Download code from above or clone this repository to your local local machine.
-   - **To run from command prompt**
-     - Go to the folder where all the files are stored
-     - Right click and select 'open in terminal' and type
+   - **To run from command prompt or from VS Code**
+     - Make sure all the libraries are installed in your local machine
+     - Open command prompt and navigate to directory where all the files are stored and run
+     - Open Terminal in VS Code and run
        ```
        python app.py (for windows)
        python3 app.py (for ubuntu)
        ```
-     - the command prompt will look something like this
+     - the command prompt/Terminal will look something like this
      
        -![cmd](https://user-images.githubusercontent.com/75663460/170492042-9863efb1-456e-4282-8308-151bea7ecae4.png) 
        
-     - press and hold the 'ctrl' button and then click on the link as shown below
-     
-       - 
+     - Press and hold the 'ctrl' button and then click on the link as shown below
+
+       -![cmd](https://user-images.githubusercontent.com/75663460/170533252-41f15bb3-9967-4dd2-8eef-0682350e1267.png)
      - This link will redirect you to a website in your default browser
- 
- - **To run from VS Code or other IDE**
-     - Go to 'app.py' file and make sure all the libraries are installed in your local machine.
-     - click on the run button in the IDE
-     - the terminla will look something like this
-       - If your terminal is giving error like 'run witn python3' or something, then just open the terminal in vs code and type the following command
-     
-     - press and hold the 'ctrl' button and then click on the link as shown below
-     - This link will redirect you to a website in your default browser
+ ## Instructions for the website
+  - After that you are redirected to the website as shown below
+    -![This is an image](https://user-images.githubusercontent.com/75663460/170486947-aa94ffe7-0762-48f6-9bdb-60b65603e224.png) 
+    
+ - Click on 'Test my project' button
+ - You will be redirected to a new page where you will upload an image of the criminal that you want to identify
+ - Read the instructions properly and before uploading
+   -![This is an image](https://user-images.githubusercontent.com/75663460/170487732-2e3f3118-6698-455a-9782-29403b50ba8d.png)
+ - Wait for some time..
+ - And voila!! You will get the name of the criminal and about him (directly from wikipedia) as shown below
+   -![This is an image](https://user-images.githubusercontent.com/75663460/170531464-bdd027db-fee3-497a-9c8c-973625434f9e.png)
+
+## How to add your own photos and test the project
+   - After downloading the code in your local machine, go to the 'faces' folder
+   - Add your photos and save them with the name of the person in that image.
+   - After that you have added your own photos in the database ('faces' folder), run app.py and choose a different image of yours and upload it.
+   - Wait for some time...
+   - And voila! 
+     - The wikipedia content might be wrong if you are not a famous person. It will show about someone with a similar name as yours :).
+## How the Face Recognition Model works
+   - Take image input from the server 
+   - The Source code of this Model consists of 3 functions
+     - get_encoded_face(): 
+       - It looks through the faces folder and encodes all the faces in a language that the ML Model can under stand
+       - It returns dictionary of anme and image encoded
+      - unknown_image_encoded():
+        - It encodes a face in the given file name in a language that the ML Model can understand
+        - It returns the encoding
+       - classify_face():
+         - It will find all of the faces in a given image and label them if it knows what they are.
+         - It returns the name/names in the input image back to the server
+
+## NOTE
+I have made this project on Windows 11. if you are in a different os and getting some errors anywhere in the project please refer to google.
