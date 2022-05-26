@@ -3,8 +3,8 @@ Rec-sy is a recognition system built using OpenCV and Python.
 
 ## About Project
 This Project is the implementation of face recognition system which identifies top notch criminals and fraudsters in the world just by using an image. The face recognition and detection is done by a face recognition model integrated in the backend part. User has to upload an image of the person that he/she wants to identify and after simulations, it will return the name of the person identified in the image from the data stored in the database.This project is also deployed on Heroku Server. 
-**Go and check it out!** Link to the project ->
-   
+- [Read the website instructions first!](https://github.com/Anushka-bot/Rec-sy#instructions-for-the-website)
+- **Go and check it out!**
 ## TechStack used
    - The Face recognition and detection model is build using OpenCV library in Python Language. OpenCV is a huge open-source library for computer vision, machine learning, and image processing. It recieves path of the image as input and after simulations return the name of the recognised person.
    - This Model is integrated with Flask server. Flask proves to be an excellent microframework for Web-Applications. After reciving output from the model, it redirects this input to the incorporated HTML page.
