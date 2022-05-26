@@ -13,7 +13,7 @@ deepface==0.0.75
 distlib==0.3.4
 dlib==19.24.0
 dnspython==2.2.1
-face-recognition==1.4.0
+face-recognition
 face-recognition-models==0.3.0
 filelock==3.6.0
 fire==0.4.0
