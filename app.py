@@ -7,7 +7,7 @@ import wikipedia
 
 app = Flask(__name__)              # making an object of flask and passing the name
 
-UPLOAD_FOLDER = 'static/uploads/'
+UPLOAD_FOLDER = 'static/'
 
 ALLOWED_EXTENSIONS = {'jpg','png','ico','jpeg','heic','webp'}
 
@@ -33,7 +33,7 @@ def upload_image():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            filepath= "static/uploads/"+filename
+            filepath= "static/"+filename
             name = fr.classify_face(filepath)
             try:
                 otput = wikipedia.summary(name, sentences = 30, auto_suggest=False, redirect=True)   #summary of the person from wikipidea
