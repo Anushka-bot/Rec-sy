@@ -4,9 +4,8 @@ Rec-sy is a recognition system built using OpenCV and Python.
 ## About Project
 This Project is the implementation of face recognition system which identifies top notch criminals and fraudsters in the world just by using an image. The face recognition and detection is done by a face recognition model integrated in the backend part. User has to upload an image of the person that he/she wants to identify and after simulations, it will return the name of the person identified in the image from the data stored in the database.This project is also deployed on Heroku Server. 
 - [Read the website instructions first!](https://github.com/Anushka-bot/Rec-sy#instructions-for-the-website)
-- **Go and check it out!**
 ## TechStack used
-   - The Face recognition and detection model is build using OpenCV library in Python Language. OpenCV is a huge open-source library for computer vision, machine learning, and image processing. It recieves path of the image as input and after simulations return the name of the recognised person.
+   - The Face recognition and detection model is built using OpenCV library in Python Language. OpenCV is a huge open-source library for computer vision, machine learning, and image processing. It recieves path of the image as input and after simulations return the name of the recognised person.
    - This Model is integrated with Flask server. Flask proves to be an excellent microframework for Web-Applications. After reciving output from the model, it redirects this input to the incorporated HTML page.
    - The Frontend Part of this Project is made using HTML, CSS and JavaScript. HTML page uses Jinja Tags to display the names recieved from the server on the website.
 
@@ -32,7 +31,7 @@ This Project is the implementation of face recognition system which identifies t
 2. face_rec.py >> It contains the face recognition and detection model.
 3. faces folder >> It is basically the database for the face recognition model. It contains all the known faces. 
 4. templates folder >> It contains all the HTML files of the Frontend Part.
-5. static/uploads folder >> It contains all the CSS, JavaScript files along with images which are used for the website. It also stores the image given by the user.
+5. static folder >> It contains all the CSS, JavaScript files along with images which are used for the website. It also stores the image given by the user.
 6. requirements.txt >> It contains all the libraries that needs to be installed in the local machine in order to run the source code.
 
 ## How to run the code
